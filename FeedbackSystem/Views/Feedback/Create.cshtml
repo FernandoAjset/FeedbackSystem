@@ -1,0 +1,19 @@
+﻿@using Application.DTOs;
+@model FeedbackDto
+
+<h1>Submit Feedback</h1>
+
+<form method="post" action="/Feedback/Create">
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="Description" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="type" class="form-label">Type</label>
+        <select class="form-control" id="type" name="Type" required>
+            <option value="0">Complaint</option>
+            <option value="1">Suggestion</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

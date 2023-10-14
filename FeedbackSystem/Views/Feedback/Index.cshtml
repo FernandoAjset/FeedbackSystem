@@ -1,0 +1,22 @@
+﻿@using Application.DTOs;
+@model IEnumerable<FeedbackDto>
+
+<h1>Feedback List</h1>
+<a class="btn btn-outline-primary" asp-action="Create">Create</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var feedback in Model)
+        {
+            <tr>
+                <td>@feedback.Description</td>
+                <td>@feedback.Type</td>
+            </tr>
+        }
+    </tbody>
+</table>
